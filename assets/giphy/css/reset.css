@@ -1,0 +1,31 @@
+body {font-weight: bold;
+	  background-color: #D3D3D3;
+}
+
+
+button {
+	border-radius: 5px;
+    background: #2a8fac;
+    padding: 18px;
+    width: 150px;
+    height: 7px;
+   	line-height: 0px;
+   	color: #ffffff;
+   	text-align: center;
+   	margin: 5px;
+}
+
+#hero-form{
+	text-align: center;
+	border: 50px;
+	font-size: 20px;
+}
+
+#addHero{
+	border-radius: 5px;
+	background: #445060;
+	width: 150px;
+	font-size: 14px;
+	color: #ffffff;
+	margin: 20px;
+}
