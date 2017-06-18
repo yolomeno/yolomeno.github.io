@@ -1,55 +1,107 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en-us">
+
   <head>
-    <title>Giphy Search </title>
 
-  <!-- reset css -->
-  <link rel="stylesheet" type="text/css" href="giphy/css/reset.css">
-   
-  <!-- style css -->
-  <link rel="stylesheet" type="text/css" href="giphy/css/style.css">
-   
-  <!-- Bootstrap File -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-   
+    <meta charset="UTF-8">
+    <title>Train Schedule</title>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
 
   </head>
 
   <body>
 
- <div class="container">
-  
+    <!-- Train Tracker -->
+    <div class="container">
 
-  <!-- Rendered Buttons will get Dumped Here -->
-<form id="miyazaki-form">
-  
-  <label for="miyazaki-input">Miyazaki</label>
-  
-  <input type="text" id="miyazaki-input"></input>
-  <input id="addMiyazaki" type="submit" value="SUBMIT"></input>
-</form>
+      <!-- Jumbotron -->
+      <div class="jumbotron" style="background-color: navy; color: white">
+        <h1 class="text-center">Train Scheduler</h1>
+        <h3 class="text-center">Choo Choo</h3>
+        <div id="clock"></div>
+      </div>
 
+      <div class="row">
 
-<div id="buttonsView"></div><br>
+        <div class="col-lg-12">
 
-<div id="miyazakiView"></div>
+        <!-- Current Employees-->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-hover" id='train-table'>
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Append Train data into here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-<div id="gifsAppearHere"></div>
+          <!-- Add Train  -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Add Train</strong></h3>
+            </div>
+            <div class="panel-body">
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="train-name-input">Train Name</label>
+                  <input class="form-control" id="train-name-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="destination-input">Destination</label>
+                  <input class="form-control" id="destination-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="first-train-input">First Train Time  (HH:mm - Military Time)</label>
+                  <input class="form-control" id="first-train-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="frequency-input">Frequency (min)</label>
+                  <input class="form-control" id="frequency-input" type="text">
+                </div>
+                <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
+              </form>
 
-</div>
+            </div>
 
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+          </div>
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  
-  <!-- Java Script - something is wrong with this refer back -->
-  <script type="text/javascript" src="giphy/javascript/app.js"></script>  
+        </div>
 
+      </div>
 
+    </div>
 
-</body>
-</html>   
+    <!-- JavaScript -->
+    <script src="assets/javascript/script.js"></script>
+
+  </body>
+
+</html>
