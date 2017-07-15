@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Reel Ratings - The Rating You've Been Looking For</title>
+    <link rel="shortcut icon" href="assets/media/reel_favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Inconsolata|Nunito|Nunito+Sans|Pacifico|Quicksand|Rubik|VT323" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="hola">
+        <div id="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12">
+                <div class="jumbotron">
+                    <h1>Reel Ratings</h1>
+                    <p>The Rating You've Been Looking For</p>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="titleSearch" placeholder="Search a Movie or TV Show...">
+                            <span class="errorMessage">Please Enter a Search Term</span>
+                            <button type="submit" class="btn btn-default" id="addShow">Submit</button>
+                            <button type="submit" class="btn btn-default" id="luckyMovie">Surprise Movie Genre!</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="moviesHere" class="row movieContainer home"></div>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h4 class="modal-title" id="modalTitleH4"></h4>
+                                <h2 class="reel-rating"></h2>
+                            </div>
+                            <div class="modal-body" id="modalMovieDiv">
+                            </div>
+                            <div class="modal-body" id="modalBodyDiv">
+                            </div>
+                            <div class="modal-body" id="modalBodyRatings">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="disclaimer">
+        Not seeing what you were looking for? Try being more specific in your search. We limit the number of results on this page so we can give everyone a better, faster experience.
+    </p>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/appModal.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/randomMovie.js"></script>
+
+    <script type="text/javascript" src="assets/js/velocity.js"></script>
+</body>
+
+</html>
