@@ -1,0 +1,27 @@
+{
+  "name": "flashcards",
+  "version": "1.0.0",
+  "description": "flashcard hw",
+  "main": "flashcards.js",
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "inquirer": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yolomeno/flashcards.git"
+  },
+  "keywords": [
+    "flashcards"
+  ],
+  "author": "Yoloxochitl Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yolomeno/flashcards/issues"
+  },
+  "homepage": "https://github.com/yolomeno/flashcards#readme"
+}
